@@ -1,6 +1,7 @@
 {
   "name": "my-first-project",
   "version": "0.0.0",
+  "homepage": "http://dhananjay8.github.io/my-ng-app",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,6 +9,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "storybook": "ng run my-first-project:storybook",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
     "build-storybook": "ng run my-first-project:build-storybook"
   },
   "private": true,
@@ -36,6 +39,7 @@
     "@storybook/blocks": "^7.0.20",
     "@storybook/testing-library": "^0.0.14-next.2",
     "@types/jasmine": "~4.3.0",
+    "gh-pages": "^5.0.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
